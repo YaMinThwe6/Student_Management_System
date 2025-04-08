@@ -1,19 +1,13 @@
+package service;
 import java.util.ArrayList;
 import java.io.*;
 import java.util.Scanner;
-public class Student_Manager {
+import model.Student;
+public class StudentManager {
 	// Ya Min, 27, ECE, J, premaymt@gmail.com, 7823970202, chennai, tamilnadu,600040
 	private ArrayList<Student> students = new ArrayList<Student>();
 	File file = new File("student_manager_db.csv");
 	Scanner scan;
-	
-	public Student_Manager() {
-		try {
-			scan = new Scanner(file);
-		} catch (FileNotFoundException e) {
-			System.out.println("File not found! " + e.getMessage());
-		}
-	}
 	
 	public String add_student(Student student) throws IOException {
 		// ArrayList - in memory management
